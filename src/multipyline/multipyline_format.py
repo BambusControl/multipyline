@@ -66,7 +66,5 @@ def multipyline_format(s: str, *args: str) -> str:
         formatted_args[arg_counter] = formatted_argument
         arg_counter += 1
 
-    print(formatted_args)
-
     formatted = s.format(*formatted_args)
     return multipyline(formatted)
