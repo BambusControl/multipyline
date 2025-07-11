@@ -1,4 +1,4 @@
-from multipyline import multipyline, multipyline_inner, multipylinef
+from multipyline import multipyline, multipyline_inner, multipyline_format
 
 
 def test_multipyline_code():
@@ -259,7 +259,7 @@ def test_multipyline_doc_inner():
     assert result == expected
 
 
-def test_multipylinef_doc_simple_function():
+def test_multipyline_format_doc_simple_function():
     # We have the implementation separate from the function header
     func_impl = """
         # Inner part
@@ -268,7 +268,7 @@ def test_multipylinef_doc_simple_function():
     """
 
     # We add the implementation into the header specifying how many spaces are before the formatting string `{multipyline_inner(...)}`
-    result = multipylinef(
+    result = multipyline_format(
         """
         def fun(x: int):
             print('Outer part')
